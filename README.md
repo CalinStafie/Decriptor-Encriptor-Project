@@ -14,8 +14,16 @@ Pentru a rula programul este de preferat sa fie rulat intr-un Terminal al unui s
 
 ```
 gcc proiect_encriptor_decriptor.c
-
 ```
+Pentru criptare: 
+```
+./a.out intrare.txt
+```
+Pentru decriptare: 
+```
+./a.out intrare.txt permutari.txt
+```
+Mai jos am selectat cateva randuri pentru a arata cum am folosit conceptul de shared_memory.
 ```c
 char shm_name[] = "shmem";
 int shm_fd = shm_open(shm_name, O_CREAT | O_RDWR, S_IRUSR  | S_IWUSR);
