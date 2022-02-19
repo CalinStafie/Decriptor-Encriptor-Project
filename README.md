@@ -5,12 +5,8 @@
 
 - Fisiere separate pentru HTML si CSS: "index.html", "style.css"
 - In interiorul documentelor HTML, sa se foloseasca minim 4 taguri semantice
-```html
-<header class="page-header">  </header>
-<nav class = 'navigator' id = 'navigator'> </nav>
-<section class = 'main-section' id ='main-section'> </section>
-<main class = 'main-div' id = 'main-div'> </main>
-<footer class="footer"> </footer>
+```c
+
 ```
 - Stilurile CSS sa fie definite folosind clase direct pe elementele care trebuie stilizate (minim 80% din selectori) 
 - Layout-ul sa fie impartit in minim 2 coloane si sa fie realizat cu Flexbox si/sau CSS grid
