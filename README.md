@@ -75,7 +75,7 @@ for(i = 0; i < numar_cuvinte; ++i)
 }
 ```
 
-La partea de procese, creez pentru fiecare data un copil pentru fiecare cuvant pe care il iau din shared_memory.
+La partea de procese, creez un copil pentru fiecare cuvant pe care il iau din shared_memory.
 ```c
 for(i = 0; i < numar_cuvinte; ++i)
 {
