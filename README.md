@@ -43,3 +43,34 @@ if(ftruncate(shm_fd, dimens) == -1)
 
 ```
 
+```c
+char *shm_ptr;
+for(i = 0; i < numar_cuvinte; ++i)
+{
+    shm_ptr = mmap(0, page_size, PROT_WRITE, MAP_SHARED, shm_fd, page_size * i);
+    if(shm_ptr == MAP_FAILED)
+    {
+        perror(NULL);
+        shm_unlink(shm_name);
+        return errno;
+    }
+    memset(buffer, 0, 10);
+    k = 0;
+    while(in = read(sursa, buffer, 1) > 0)
+    {
+        if(buffer[0] == ' ')
+        {
+            if(k != 0)
+                break;
+        }
+        else
+        {
+            ++k;
+            shm_ptr += sprintf(shm_ptr, "%c", buffer[0]);
+        }
+    }
+
+    munmap(shm_ptr, page_size);
+
+}
+```
