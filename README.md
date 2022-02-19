@@ -6,6 +6,21 @@
 - Fisiere separate pentru HTML si CSS: "index.html", "style.css"
 - In interiorul documentelor HTML, sa se foloseasca minim 4 taguri semantice
 ```c
+char shm_name[] = "shmem";
+        int shm_fd = shm_open(shm_name, O_CREAT | O_RDWR, S_IRUSR  | S_IWUSR);
+
+        if(shm_fd < 0)
+        {
+            perror(NULL);
+            return errno;
+        }
+        size_t dimens = page_size * numar_cuvinte;
+        if(ftruncate(shm_fd, dimens) == -1)
+        {
+            perror(NULL);
+            shm_unlink(shm_name);
+            return errno;
+        }
 
 ```
 - Stilurile CSS sa fie definite folosind clase direct pe elementele care trebuie stilizate (minim 80% din selectori) 
