@@ -2,7 +2,7 @@
 
 Pentru criptare, programul primeste un fisier de cuvinte pe care le proceseaza si face o permutare random al fiecarui cuvant si apoi se va scrie intr-un fisier de iesire toate cuvintele criptate cu ajutorul permutarilor random si va scrie in alt fisier toate permutarile random generate.
 
-Pentru descriptare, programul va primi un fisier de cuvinte criptate si un alt fisier care contine permutarile literelor fiecarui cuvant, se vor scrie cuvintele decriptate intr-un fisier de iesire.
+Pentru decriptare, programul va primi un fisier de cuvinte criptate si un alt fisier care contine permutarile literelor fiecarui cuvant, se vor scrie cuvintele decriptate intr-un fisier de iesire.
 
 Cerinta: 
 Sa se implementeze un encriptor/decriptor care primeste un fisier de intrare cu diferite cuvinte. Programul mapeaza fisierul de intrare in memorie si porneste mai multe procese care vor aplica o permutare random pentru fiecare cuvant. Permutarile vor fi scrise intr-un fisier de iesire. Programul poate primi ca argument doar fisierul de intrare, in acest caz va face criptarea cuvintelor; sau va primi fisierul avand cuvintele criptate si permutarile folosite pentru criptare, caz in care va genera fisierul de
